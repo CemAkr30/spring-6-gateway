@@ -1,0 +1,12 @@
+server:
+  port: 9990
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: spring-6-reactive
+          uri: http://localhost:9999
+          predicates:
+            - Path=/api/*
+
